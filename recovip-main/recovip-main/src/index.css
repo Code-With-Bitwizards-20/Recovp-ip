@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quattrocento:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 1 linear;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@font-face {
+  font-family: "Edenmeadowdemo";
+  src: url("./assets/fonts/Edenmeadowdemo.ttf");
+}
+
+.AllianceFont {
+  font-family: "Edenmeadowdemo";
+}
+
+.protfolioShadow {
+  box-shadow: -3px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.customBGLogo {
+  background: rgb(77, 0, 110);
+  background: linear-gradient(360deg, rgba(77, 0, 110, 1) 0%, #783be0 100%);
+}
+.costomBgLogo {
+  background: #f8eaff;
+  background: linear-gradient(
+    360deg,
+    rgba(248, 234, 255, 1) 0%,
+    rgba(243, 243, 243, 1) 100%
+  );
+}
+.customLine__height {
+  line-height: 3.5vw;
+}
+
+/*  */
+.pOneImgWrapper {
+  /* animation: animBorder 5s linear infinite; */
+  /* background-color: red; */
+  overflow: hidden;
+}
+.pOneImg {
+  animation: animBorder 4s linear infinite;
+}
+@keyframes animBorder {
+  0%,
+  100% {
+    /* border-radius: 10% 10% 0% 10%/20% 100% 80% 10%; */
+    border-radius: 80% 60% 50% 90%/80% 50% 90% 60%;
+    transform: scale(1) skew(0deg);
+  }
+  50% {
+    /* border-radius: 100% 100% 90% 100%/60% 20% 50% 100%; */
+    border-radius: 50% 80% 90% 60%/70% 80% 50% 80%;
+    transform: scale(1.03) skew(1deg);
+  }
+}
+
+.hoverAnimationContactBTN span {
+  transition: transform 0.6s ease-in-out;
+}
+
+.hoverAnimationContactBTN::after {
+  position: absolute;
+  content: "";
+  background-color: #210030;
+  width: 10%;
+  height: 10%;
+  top: 65%;
+  left: 10%;
+  border-radius: 9999px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.hoverAnimationContactBTN:hover {
+  color: white;
+}
+.hoverAnimationContactBTN:hover span {
+  transform: rotate(45deg);
+}
+.hoverAnimationContactBTN span svg {
+  fill: #210030 !important;
+}
+.hoverAnimationContactBTN:hover span svg {
+  fill: gold !important;
+}
+.hoverAnimationContactBTN:hover::after {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+  background-color: #210030;
+}
+.hoverEffect span {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  transition: 0.5 linear;
+}
+.hoverEffect span svg {
+  opacity: 0;
+  transition: 0.5 linear;
+}
+
+.hoverEffect:hover span {
+  height: 30px;
+  width: 30px;
+  transition: 0.5 linear;
+}
+.hoverEffect:hover span svg {
+  opacity: 1;
+  transition: 0.5 linear;
+}
+
+.customMenu__shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 0.5px solid gold;
+}
+.testimonialCardBC {
+  background: linear-gradient(159deg, #fff 2.59%, #e5e5e5 94.93%);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.borderGradient {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #000 0.01%, rgba(0, 0, 0, 0) 100%);
+  border-image-slice: 1;
+}
+.customBgServiceT {
+  background: rgb(206, 204, 184);
+  background: linear-gradient(
+    177deg,
+    rgba(206, 204, 184, 1) 0%,
+    rgba(247, 246, 242, 1) 100%
+  );
+}
+
+.customBgServiceTw {
+  background: rgb(99, 102, 103);
+  background: linear-gradient(
+    360deg,
+    rgba(99, 102, 103, 1) 0%,
+    rgba(150, 146, 145, 1) 100%
+  );
+}
+
+
+
+
+.homeFooterBTNShadow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 50px 15px rgb(228 19 246 / 0.2),
+    -2px -2px 50px 15px rgb(228 19 246 / 0.2);
+  /* box-shadow: 2px 2px 50px 15px inherit,
+    -2px -2px 50px 15px inherit; */
+  animation: changeBG 15s linear infinite;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#rotatingDiv {
+  background: conic-gradient(
+    from var(--angle) at 50% 50%,
+    transparent 63%,
+    rgb(255, 0, 140) 90%
+  );
+  animation: 3.5s spin linear infinite, colorChange 15s linear infinite;
+  transition: background 0.3s ease-in-out;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes changeBG {
+  0% {
+    background: rgb(228, 19, 246);
+    box-shadow: 2px 2px 40px 10px rgba(228, 19, 246, 0.2),
+      -2px -2px 40px 10px rgba(228, 19, 246, 0.2);
+  }
+  25% {
+    background: rgb(92, 19, 246);
+    box-shadow: 2px 2px 50px 15px rgba(92, 19, 246, 0.2),
+      -2px -2px 50px 15px rgba(92, 19, 246, 0.2);
+  }
+  50% {
+    background: rgb(19, 178, 246);
+    box-shadow: 2px 2px 50px 15px rgba(19, 178, 246, 0.2),
+      -2px -2px 50px 15px rgba(19, 178, 246, 0.2);
+  }
+  75% {
+    background: rgb(27, 255, 132);
+    box-shadow: 2px 2px 50px 15px rgba(27, 255, 132, 0.2),
+      -2px -2px 50px 15px rgba(27, 255, 132, 0.2);
+  }
+  100% {
+    background: rgb(214, 255, 51);
+    box-shadow: 2px 2px 50px 15px rgba(214, 255, 51, 0.2),
+      -2px -2px 50px 15px rgba(214, 255, 51, 0.2);
+  }
+}
+@keyframes colorChange {
+  0% {
+    border-top-color: #800080;
+    /* background: conic-gradient(from var(--angle) at 50% 50%, rgba(18, 18, 18, 1) 63%, #5C13F6 100%); */
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 63%,
+      rgb(241, 88, 255) 90%
+    );
+  }
+  25% {
+    border-top-color: #c91ac9;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(125, 67, 248) 74%
+    );
+  }
+  50% {
+    border-top-color: #0000ff;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(77, 193, 243) 74%
+    );
+  }
+  75% {
+    border-top-color: #d1d153;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(104, 250, 172) 74%
+    );
+  }
+  100% {
+    border-top-color: #800080;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(224, 248, 127) 74%
+    );
+  }
+}
